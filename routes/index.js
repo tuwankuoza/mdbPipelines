@@ -1,8 +1,11 @@
 const router = require('express').Router()
-// const UserController = require('../controllers/userController')
+const ProductController = require('../controllers/controller')
 
-// router.get('/', UserController.listUser)
-// router.post('/login', UserController.login)
-// router.post('/register', UserController.register)
+router.get('/', ProductController.listProduct)
+router.get('/sort', ProductController.sortProduct)
+router.get('/filter', ProductController.filterProduct)
+router.get('/brands', ProductController.brandStats)
+
+
 
 module.exports = router

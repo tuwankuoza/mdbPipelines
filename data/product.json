@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Deodorant",
+    "price": 20000,
+    "quantity": 15,
+    "brand": "Unilever",
+    "sold": 11
+  },
+  {
+    "name": "Soap",
+    "price": 5000,
+    "quantity": 12,
+    "brand": "Wings",
+    "sold": 21
+  },
+  {
+    "name": "Shampoo",
+    "price": 25000,
+    "quantity": 20,
+    "brand": "Wings",
+    "sold": 4
+  },
+  {
+    "name": "Toothpaste",
+    "price": 15000,
+    "quantity": 10,
+    "brand": "Unilever",
+    "sold": 6
+  },
+  {
+    "name": "Cup Noodle",
+    "price": 4500,
+    "quantity": 0,
+    "brand": "Indofood",
+    "sold": 70
+  },
+  {
+    "name": "Chocolate Bar",
+    "price": 5000,
+    "quantity": 100,
+    "brand": "Garuda Food",
+    "sold": 15
+  },
+  {
+    "name": "Instant Noodle",
+    "price": 2500,
+    "quantity": 200,
+    "brand": "Indofood",
+    "sold": 120
+  },
+  {
+    "name": "Canned Fish",
+    "price": 35000,
+    "quantity": 50,
+    "brand": "Indofood",
+    "sold": 5
+  },
+  {
+    "name": "Cheese Ball Snack",
+    "price": 5000,
+    "quantity": 0,
+    "brand": "Garuda Food",
+    "sold": 10
+  }
+]

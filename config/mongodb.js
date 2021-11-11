@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb')
 
 const url = process.env.MONGODB_URI || 'mongodb://localhost:27017';
 const client = new MongoClient(url)
-const dbName = 'test_pipeline'
+const dbName = 'Supermarket'
 
 let database = null
 
