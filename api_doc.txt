@@ -1,0 +1,184 @@
+Cart & Product
+
+note: data source is from dummy data or seed data in directory ./data (not from 3rd party api)
+
+List all product "/"
+-url: /
+-method: GET
+-success response:
+  status: 200
+  content:
+  {
+    "available": [
+        {
+            "_id": "618cb4d69f498933c1ec9f17",
+            "name": "Deodorant",
+            "price": 20000,
+            "quantity": 15,
+            "brand": "Unilever",
+            "sold": 11
+        },
+        ...
+    ],
+    "empty": [
+        {
+            "_id": "618cb4d69f498933c1ec9f1b",
+            "name": "Cup Noodle",
+            "price": 4500,
+            "quantity": 0,
+            "brand": "Indofood",
+            "sold": 70
+        },
+        ...
+    ]
+  }
+
+-error response:
+  status: 500
+  content: message: internal server error
+
+
+Sort product "/sort"
+-url: /sort
+-method: GET
+-body:
+  type: sort type (asc / desc)
+  field: sorted field (price, quantity, sold)
+-success response:
+  status: 200
+  content:
+  [
+      {
+          "_id": "618cb4d69f498933c1ec9f1d",
+          "name": "Instant Noodle",
+          "price": 2500,
+          "quantity": 200,
+          "brand": "Indofood",
+          "sold": 120
+      },
+      {
+          "_id": "618cb4d69f498933c1ec9f1b",
+          "name": "Cup Noodle",
+          "price": 4500,
+          "quantity": 0,
+          "brand": "Indofood",
+          "sold": 70
+      },
+      {
+          "_id": "618cb4d69f498933c1ec9f18",
+          "name": "Soap",
+          "price": 5000,
+          "quantity": 12,
+          "brand": "Wings",
+          "sold": 21
+      },
+      ...
+  ]
+
+-error response:
+  status: 500
+  content: message: internal server error
+
+
+Filter product "/filter"
+-url: /filter
+-method: GET
+-body: name, brand, price, quantity
+-success response:
+  status: 200
+  content:  
+  [
+    {
+        "_id": "618cb4d69f498933c1ec9f18",
+        "name": "Soap",
+        "price": 5000,
+        "quantity": 12,
+        "brand": "Wings",
+        "sold": 21
+    },
+    ...
+  ]
+
+-error response:
+  status: 404
+  content: message: product not found
+
+  or
+
+  status: 500
+  content: message: internal server error
+
+
+Brand Statistics "/brands"
+-url: /brands
+-method: GET
+-success response:
+  status: 200
+  content: 
+  [
+    {
+        "_id": "Indofood",
+        "averageSold": 65,
+        "total": 195
+    },
+    {
+        "_id": "Garuda Food",
+        "averageSold": 12.5,
+        "total": 25
+    },
+    ...
+  ]
+
+-error response:
+  status: 500
+  content: message: internal server error
+
+
+Show customer purchase data "/cart"
+-url: /cart
+-method: GET
+-body: name (customer name)
+-success response:
+  status: 200
+  content:
+  [
+    {
+        "_id": "Steve",
+        "totalItem": 13,
+        "totalPurchase": 40000
+    }
+  ]
+
+-error response:
+  status: 404
+  content: message: Purchase data not found
+
+  or
+
+  status: 500
+  content: message: internal server error
+
+
+Show all customer purchase data "/purchased"
+-url: /purchased
+-method: GET
+-success response:
+  status: 200
+  content:
+  [
+    {
+        "_id": "Steve",
+        "totalItem": 13,
+        "totalPurchase": 40000
+    },
+    {
+        "_id": "Jessica",
+        "totalItem": 2,
+        "totalPurchase": 30000
+    },
+    ...
+  ]
+
+-error response:
+  status: 500
+  content: message: internal server error

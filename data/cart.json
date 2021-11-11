@@ -1,0 +1,50 @@
+[
+  {
+    "customer": "Steve",
+    "product": "Soap",
+    "quantity": 2,
+    "total": 10000
+  },
+  {
+    "customer": "Jessica",
+    "product": "Shampoo",
+    "quantity": 1,
+    "total": 25000
+  },
+  {
+    "customer": "Billy",
+    "product": "Deodorant",
+    "quantity": 1,
+    "total": 20000
+  },
+  {
+    "customer": "Steve",
+    "product": "Instant Noodle",
+    "quantity": 10,
+    "total": 25000
+  },
+  {
+    "customer": "Steve",
+    "product": "Chocolate Bar",
+    "quantity": 1,
+    "total": 5000
+  },
+  {
+    "customer": "Jessica",
+    "product": "Soap",
+    "quantity": 1,
+    "total": 5000
+  },
+  {
+    "customer": "Taylor",
+    "product": "Soap",
+    "quantity": 1,
+    "total": 5000
+  },
+  {
+    "customer": "Rick",
+    "product": "Chocolate Bar",
+    "quantity": 3,
+    "total": 15000
+  }
+]
